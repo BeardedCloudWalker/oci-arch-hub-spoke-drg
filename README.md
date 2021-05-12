@@ -1,8 +1,8 @@
-# Hub-and-Spoke Network using DRG 
+# Hub-and-Spoke Network using DRG
 
-A hub-and-spoke network, often called a star network, has a central component that's connected to multiple networks around it. The overall topology resembles a wheel, with a central hub connected to points along the edge of the wheel through multiple spokes. Setting up this topology in the traditional on-premises data center can be expensive. But in the cloud, there’s no extra cost. With new features added to the Dynamic Routing Gateway (DRG), the DRG is now capable of having multiple VCNs attached, becoming the hub of the architecture.
+A Hub-and-spoke network (often called star topology) has a central component (the hub) that's connected to multiple networks around it, like a wheel. Implementing this topology in the traditional data center can be costly. But in the Oracle Cloud, there’s no extra cost.
 
-For details of the architecture, see [_Set up a hub-and-spoke network topology_](https://docs.oracle.com/en/solutions/hub-spoke-drg-network/index.html).
+With new features added to the Dynamic Routing Gateway (DRG), the DRG is now capable of having multiple VCNs attached, becoming the central component and adding flexibility to how you design your cloud network
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ If you don't have the required permissions and quota, contact your tenancy admin
 
 ## Deploy Using Oracle Resource Manager
 
-1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/oracle-quickstart/oci-arch-hub-spoke-drg/releases/latest/download/oci-arch-hub-spoke-drg-stack-latest.zip)
+1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/oracle-quickstart/oci-arch-dmz-spoke/releases/latest/download/oci-arch-hub-spoke-drg-stack-latest.zip)
 
     If you aren't already signed in, when prompted, enter the tenancy and user credentials.
 
@@ -37,13 +37,13 @@ If you don't have the required permissions and quota, contact your tenancy admin
 ### Clone the Module
 Create a local copy of this repository:
 
-    git clone https://github.com/oracle-quickstart/oci-arch-hub-spoke-drg.git
-    cd oci-arch-hub-spoke
+    git clone https://gitdmz.com/oracle-quickstart/oci-arch-hub-spoke-drg.git
+    cd oci-arch-hub-spoke-drg
     ls
 
 ### Set Up and Configure Terraform
 
-1. Complete the prerequisites described [here](https://github.com/cloud-partners/oci-prerequisites).
+1. Complete the prerequisites described [here](https://gitdmz.com/cloud-partners/oci-prerequisites).
 
 2. Create a `terraform.tfvars` file, and specify the following variables:
 
