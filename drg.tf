@@ -4,6 +4,7 @@
 resource "oci_core_drg" "drg01" {
     compartment_id = var.compartment_ocid
     display_name = var.drg01_display_name
+    defined_tags = {"${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
 }
 
 resource "oci_core_drg_attachment" "drg01_dmz_attachment" {

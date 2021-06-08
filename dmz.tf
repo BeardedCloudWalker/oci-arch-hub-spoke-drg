@@ -6,7 +6,7 @@ resource "oci_core_vcn" "dmz" {
   dns_label      = var.dmz_vcn_dns_label
   compartment_id = var.compartment_ocid
   display_name   = var.dmz_vcn_display_name
-  # defined_tags   = {"${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
+  defined_tags   = {"${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
 }
 
 #IGW
@@ -15,7 +15,7 @@ resource "oci_core_internet_gateway" "dmz_internet_gateway" {
     vcn_id = oci_core_vcn.dmz.id
     enabled = "true"
     display_name = "IGW_dmz"
-    # defined_tags = {"${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
+    defined_tags = {"${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
 }
 
 #Default route table dmz
@@ -36,7 +36,7 @@ resource "oci_core_default_route_table" "dmz_default_route_table" {
         destination       = var.spoke02_vcn_cidr_block
         destination_type  = "CIDR_BLOCK"
     }
-    # defined_tags         = {"${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
+    defined_tags         = {"${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
 }
 
 
@@ -47,6 +47,6 @@ resource "oci_core_subnet" "dmz_subnet_pub01" {
     compartment_id = var.compartment_ocid
     vcn_id = oci_core_vcn.dmz.id
     display_name = var.dmz_subnet_pub01_display_name
-    # defined_tags = {"${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
+    defined_tags = {"${oci_identity_tag_namespace.ArchitectureCenterTagNamespace.name}.${oci_identity_tag.ArchitectureCenterTag.name}" = var.release }
 }
 
