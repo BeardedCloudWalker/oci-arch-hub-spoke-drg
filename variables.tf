@@ -2,8 +2,8 @@
 ## All rights reserved. The Universal Permissive License (UPL), Version 1.0 as shown at http://oss.oracle.com/licenses/upl
 
 variable "region" {}
-variable "fingerprint" {} #
-variable "user_ocid" {} #
+variable "fingerprint" {}      #
+variable "user_ocid" {}        #
 variable "private_key_path" {} #
 variable "tenancy_ocid" {}
 variable "compartment_ocid" {}
@@ -11,7 +11,7 @@ variable "availablity_domain_name" {}
 
 variable "release" {
   description = "Reference Architecture Release (OCI Architecture Center)"
-  default     = "1.0"
+  default     = "1.1"
 }
 
 variable "igw_display_name" {
@@ -96,20 +96,20 @@ variable "instance_os" {
 
 variable "linux_os_version" {
   description = "Operating system version for all Linux instances"
-#  default     = "7.9"
-  default     = "8"
+  #  default     = "7.9"
+  default = "8"
 }
 
 variable "InstanceShape" {
-    default = "VM.Standard.E3.Flex"
+  default = "VM.Standard.E3.Flex"
 }
 
 variable "InstanceFlexShapeOCPUS" {
-    default = 1
+  default = 1
 }
 
 variable "InstanceFlexShapeMemory" {
-    default = 10
+  default = 10
 }
 
 variable "ssh_public_key" {
@@ -121,15 +121,15 @@ variable "deploy_spoke01_instance" {
 }
 
 variable "InstanceShapeSpoke01" {
-    default = "VM.Standard.E3.Flex"
+  default = "VM.Standard.E3.Flex"
 }
 
 variable "InstanceFlexShapeOCPUSSpoke01" {
-    default = 1
+  default = 1
 }
 
 variable "InstanceFlexShapeMemorySpoke01" {
-    default = 10
+  default = 10
 }
 
 variable "deploy_spoke02_instance" {
@@ -137,15 +137,15 @@ variable "deploy_spoke02_instance" {
 }
 
 variable "InstanceShapeSpoke02" {
-    default = "VM.Standard.E3.Flex"
+  default = "VM.Standard.E3.Flex"
 }
 
 variable "InstanceFlexShapeOCPUSSpoke02" {
-    default = 1
+  default = 1
 }
 
 variable "InstanceFlexShapeMemorySpoke02" {
-    default = 10
+  default = 10
 }
 
 # Dictionary Locals
@@ -159,7 +159,7 @@ locals {
 
 # Checks if is using Flexible Compute Shapes
 locals {
-  is_flexible_node_shape = contains(local.compute_flexible_shapes, var.InstanceShape)
+  is_flexible_node_shape         = contains(local.compute_flexible_shapes, var.InstanceShape)
   is_flexible_node_shape_spoke01 = contains(local.compute_flexible_shapes, var.InstanceShapeSpoke01)
   is_flexible_node_shape_spoke02 = contains(local.compute_flexible_shapes, var.InstanceShapeSpoke02)
 }
