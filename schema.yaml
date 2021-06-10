@@ -229,6 +229,9 @@
               - eq:
                 - InstanceShape 
                 - "VM.Standard.E4.Flex"
+              - eq:
+                - InstanceShape 
+                - "VM.Standard.A1.Flex"
 
       InstanceFlexShapeMemory:
         type: number
@@ -248,6 +251,9 @@
               - eq:
                 - InstanceShape
                 - "VM.Standard.E4.Flex"
+              - eq:
+                - InstanceShape
+                - "VM.Standard.A1.Flex"
 
       instance_os:
         type: enum
@@ -307,6 +313,9 @@
                 - eq:
                   - InstanceShapeSpoke01 
                   - "VM.Standard.E4.Flex"
+                - eq:
+                  - InstanceShapeSpoke01 
+                  - "VM.Standard.A1.Flex"
 
       InstanceFlexShapeMemorySpoke01:
         type: number
@@ -328,7 +337,9 @@
                 - eq:
                   - InstanceShapeSpoke01 
                   - "VM.Standard.E4.Flex"
-
+                - eq:
+                  - InstanceShapeSpoke01 
+                  - "VM.Standard.A1.Flex"
 
       deploy_spoke02_instance:
         type: boolean
@@ -369,6 +380,9 @@
                 - eq:
                   - InstanceShapeSpoke02 
                   - "VM.Standard.E4.Flex"
+                - eq:
+                  - InstanceShapeSpoke02 
+                  - "VM.Standard.A1.Flex"
 
       InstanceFlexShapeMemorySpoke02:
         type: number
@@ -390,6 +404,9 @@
                 - eq:
                   - InstanceShapeSpoke02 
                   - "VM.Standard.E4.Flex"
+                - eq:
+                  - InstanceShapeSpoke02 
+                  - "VM.Standard.A1.Flex"
 
       release:
         type: string
