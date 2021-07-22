@@ -2,9 +2,9 @@
 ## All rights reserved. The Universal Permissive License (UPL), Version 1.0 as shown at http://oss.oracle.com/licenses/upl
 
 variable "region" {}
-variable "fingerprint" {}      #
-variable "user_ocid" {}        #
-variable "private_key_path" {} #
+# variable "fingerprint" {}      # Removed for running in Resourse manager
+# variable "user_ocid" {}        #
+# variable "private_key_path" {} #
 variable "tenancy_ocid" {}
 variable "compartment_ocid" {}
 variable "availablity_domain_name" {}
@@ -17,7 +17,6 @@ variable "release" {
 variable "igw_display_name" {
   default = "internet-gateway"
 }
-
 
 variable "drg01_display_name" {
   default = "DRG01"
